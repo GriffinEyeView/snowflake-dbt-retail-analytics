@@ -1,0 +1,10 @@
+
+target/
+dbt_packages/
+logs/
+.env
+
+# dbt logs and generated artifacts
+logs/
+target/
+dbt_packages/

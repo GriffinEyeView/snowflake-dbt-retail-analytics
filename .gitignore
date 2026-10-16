@@ -1,0 +1,9 @@
+
+.keys/
+.venv/
+
+
+# dbt generated files
+logs/
+target/
+dbt_packages/

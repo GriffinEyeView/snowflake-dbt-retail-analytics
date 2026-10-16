@@ -1,0 +1,35 @@
+version: 2
+
+models:
+  - name: stg_retail_orders
+    description: "Cleaned and standardized retail order data."
+    columns:
+      - name: order_id
+        description: "Unique identifier for each order."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: "Identifier for the customer."
+        data_tests:
+          - not_null
+
+      - name: sales_amount
+        description: "Quantity multiplied by unit price."
+        data_tests:
+          - not_null
+
+  - name: fct_retail_sales
+    description: "Sales metrics aggregated by product category."
+    columns:
+      - name: category
+        description: "Product category."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: total_sales
+        description: "Total sales revenue for the category."
+        data_tests:
+          - not_null
